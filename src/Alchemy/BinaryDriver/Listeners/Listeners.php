@@ -62,7 +62,7 @@ class Listeners extends EventEmitter
             $listener->removeListener($event, $EElistener);
         }
 
-        $this->storage->detach($listener);
+        $this->storage->offsetUnset($listener);
 
         return $this;
     }
