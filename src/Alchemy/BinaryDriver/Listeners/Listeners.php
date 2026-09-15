@@ -38,7 +38,7 @@ class Listeners extends EventEmitter
             $EElisteners = $this->forwardEvents($listener, $target, $listener->forwardedEvents());
         }
 
-        $this->storage->offsetSet($listener, $EElisteners);
+        $this->storage->attach($listener, $EElisteners);
 
         return $this;
     }
